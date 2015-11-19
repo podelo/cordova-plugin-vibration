@@ -87,15 +87,7 @@ public class Vibration extends CordovaPlugin {
     public void vibrate(long time) {
 		// Start the vibration, 0 defaults to half a second.
 		
-		Context context = getApplicationContext();
-		CharSequence text = "Hello toast!";
-		int duration = Toast.LENGTH_SHORT;
-
-		Toast toast = Toast.makeText(context, text, duration);
-		toast.show();
-		
-		
-        if (time == 0) {
+		if (time == 0) {
             time = 500;
         }
         AudioManager manager = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -103,6 +95,13 @@ public class Vibration extends CordovaPlugin {
             Vibrator vibrator = (Vibrator) this.cordova.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(time);
         }
+		
+		Context context = getApplicationContext();
+		CharSequence text = "Hello toast!";
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
     }
 
     /**
