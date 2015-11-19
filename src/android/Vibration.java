@@ -95,13 +95,16 @@ public class Vibration extends CordovaPlugin {
             vibrator.vibrate(time);
         }
 		
-		AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+		/*Context context = getApplicationContext();
+		
+		AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(context);
 		dlgAlert.setMessage("This is an alert with no consequence");
 		dlgAlert.setTitle("App Title");
 		dlgAlert.setPositiveButton("OK", null);
 		dlgAlert.setCancelable(true);
 		dlgAlert.create().show();
-    }
+    */
+	}
 
     /**
      * Vibrates the device with a given pattern.
