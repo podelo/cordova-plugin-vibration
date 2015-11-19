@@ -86,14 +86,14 @@ public class Vibration extends CordovaPlugin {
      */
     public void vibrate(long time) {
         // Start the vibration, 0 defaults to half a second.
-        if (time == 0) {
+        /*if (time == 0) {
             time = 500;
         }
         AudioManager manager = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);
         if (manager.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
             Vibrator vibrator = (Vibrator) this.cordova.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(time);
-        }
+        }*/
 		
 		Context context = this.cordova.getActivity().getApplicationContext(); 
 		
