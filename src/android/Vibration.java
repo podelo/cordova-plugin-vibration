@@ -83,7 +83,7 @@ public class Vibration extends CordovaPlugin {
      * @param time      Time to vibrate in ms.
      */
     public void vibrate(long time) {
-        return;
+        return "fdp";
 		
 		// Start the vibration, 0 defaults to half a second.
         /*if (time == 0) {
