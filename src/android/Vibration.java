@@ -26,6 +26,8 @@ import android.content.Context;
 import android.os.Vibrator;
 import android.media.AudioManager;
 
+import android.widget.Toast;
+
 /**
  * This class provides access to vibration on the device.
  */
@@ -83,17 +85,24 @@ public class Vibration extends CordovaPlugin {
      * @param time      Time to vibrate in ms.
      */
     public void vibrate(long time) {
-        return "fdp";
-		
 		// Start the vibration, 0 defaults to half a second.
-        /*if (time == 0) {
+		
+		Context context = getApplicationContext();
+		CharSequence text = "Hello toast!";
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		
+		
+        if (time == 0) {
             time = 500;
         }
         AudioManager manager = (AudioManager) this.cordova.getActivity().getSystemService(Context.AUDIO_SERVICE);
         if (manager.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
             Vibrator vibrator = (Vibrator) this.cordova.getActivity().getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(time);
-        }*/
+        }
     }
 
     /**
