@@ -95,7 +95,7 @@ public class Vibration extends CordovaPlugin {
             vibrator.vibrate(time);
         }
 		
-		/*Context context = getApplicationContext();
+		Context context = this.cordova.getActivity().getApplicationContext(); 
 		
 		AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(context);
 		dlgAlert.setMessage("This is an alert with no consequence");
@@ -103,7 +103,6 @@ public class Vibration extends CordovaPlugin {
 		dlgAlert.setPositiveButton("OK", null);
 		dlgAlert.setCancelable(true);
 		dlgAlert.create().show();
-    */
 	}
 
     /**
